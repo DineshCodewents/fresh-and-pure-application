@@ -768,6 +768,10 @@ body,
   }
 
   @media (max-width:575px) {
+    .navbar-brand img {
+      height: 75px;
+      width: 75px;
+    }
     .carousel-txt p {
       display: none;
     }
