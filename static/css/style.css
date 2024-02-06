@@ -658,7 +658,9 @@ body,
   .contact-section {
     display: none;
   }
-
+  .navbar-nav{
+    margin-bottom: 10px;
+  }
   .navbar-icons {
     display: flex;
     justify-content: center;
