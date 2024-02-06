@@ -12,15 +12,20 @@ body,
   justify-content: space-between;
   background-color: #0A306C;
 }
-.contact-container{
+
+.contact-container {
   display: flex;
   justify-content: space-between;
 }
-.envelope-section,.location-section, .phone-section{
+
+.envelope-section,
+.location-section,
+.phone-section {
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
+
 .contact-online {
   display: flex;
   align-self: center;
@@ -28,11 +33,13 @@ body,
   align-items: baseline;
   flex-wrap: wrap;
 }
-.contact-offline{
+
+.contact-offline {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
+
 .contact-offline i {
   margin: 10px;
 }
@@ -85,10 +92,12 @@ body,
 .navbar-nav a:hover {
   color: #FFD43B;
 }
-.navbar-icons{
+
+.navbar-icons {
   display: flex;
   gap: 20px;
 }
+
 .navbar-icons i {
   color: #0A306C;
   background-color: #ffffff;
@@ -159,7 +168,8 @@ body,
   font-weight: bold;
 
 }
-.btn-contact:hover{
+
+.btn-contact:hover {
   background-color: #FFD43B;
   color: #0A306C;
 }
@@ -287,16 +297,20 @@ body,
   flex-direction: column;
   text-align: center;
 }
-.col-md-3 .company-product-card{
+
+.col-md-3 .company-product-card {
   border-radius: 25px;
 }
-.col-md-3 .company-product-card:hover{
+
+.col-md-3 .company-product-card:hover {
   border: 1px solid #FFD43B;
 }
-.company-product-card img{
- border-top-left-radius: 25px;
- border-top-right-radius: 25px;
+
+.company-product-card img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
+
 .card-item {
   align-items: flex-start;
   display: flex;
@@ -633,7 +647,7 @@ body,
   flex-direction: row;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .social-icons i {
@@ -699,7 +713,8 @@ body,
     display: none;
   }
 
-  .section-6-col-2, .section-6-row {
+  .section-6-col-2,
+  .section-6-row {
     margin: 0;
     padding: 0;
   }
@@ -712,9 +727,12 @@ body,
   }
 
   @media (max-width:767px) {
-    .carousel-txt h1, .popular-txt{
+
+    .carousel-txt h1,
+    .popular-txt {
       font-size: 35px;
     }
+
     .btn-section {
       display: flex;
       flex-direction: column;
@@ -736,6 +754,7 @@ body,
     .company-details {
       margin: 20px 0;
     }
+
     .section-5-row .section-5-col-1,
     .section-5-row .section-5-col-2,
     .section-5-row .section-5-col-3,
@@ -747,8 +766,23 @@ body,
   }
 
   @media (max-width:575px) {
-    .carousel-txt p{
+    .carousel-txt p {
       display: none;
+    }
+
+    .carousel-txt h1 {
+      font-size: 24px;
+    }
+
+    .about-txt-section {
+      text-align: center;
+      max-width: 350px;
+    }
+
+    .company-name,
+    .company-para {
+      width: 60%;
+      align-self: center;
     }
   }
 }
