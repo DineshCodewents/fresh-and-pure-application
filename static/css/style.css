@@ -110,6 +110,7 @@ body,
   color: #FFD43B;
 }
 
+
 .carousel-item {
   height: 600px;
   background-size: cover;
@@ -117,6 +118,18 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: zoomIn 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .carousel-item::before {
@@ -134,15 +147,18 @@ body,
   text-align: center;
   position: absolute;
   color: #FFFFFF;
-  width: 40%;
+  width: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .carousel-txt h1 {
-  font-size: 45px;
+  font-size: 65px;
   font-weight: bold;
+}
+.carousel-txt p{
+  font-size: 18px;
 }
 
 .btn-readmore,
@@ -183,14 +199,56 @@ body,
   display: flex;
   justify-content: space-evenly;
 }
+.carousel-txt {
+  text-align: center;
+  position: absolute;
+  color: #FFFFFF;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; 
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.carousel-item:nth-child(1) .carousel-txt {
+  animation-delay: 1s;
+}
+
+.carousel-item:nth-child(2) .carousel-txt {
+  animation-delay: 1;
+}
+
+.carousel-item:nth-child(3) .carousel-txt {
+  animation-delay: 1s;
+}
+
+/* section-2 css starts */
 
 .section-2 {
   max-width: 100%;
   margin: 100px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
 }
 
 .section-2-1 img {
   border-radius: 20px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1.5s, opacity 1.5s;
 }
 
 .section-2-2 p {
@@ -230,11 +288,18 @@ body,
   gap: 15px;
 }
 
-.li-1,
-.li-2 {
-  margin-bottom: 30px;
+/* Animation triggered by Intersection Observer */
+
+.section-2.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+.section-2.in-view .section-2-1 img {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* section3 starts */
 .mt-5 {
   margin: 0 50px;
 }
@@ -249,12 +314,39 @@ body,
 }
 
 .col-md-4 .product-card {
+  position: relative;
   height: 300px;
-  background-size: cover;
-  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.col-md-4 .product-card img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: transform 0.3s
+}
+
+.col-md-4 .product-card:hover img {
+  transform: scale(1.2);
+}
+.col-md-4 .product-card .card-item {
+  position: absolute;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.col-md-4 .product-card .card-item h4 {
+  margin: 0;
+}
+
+.fa-circle-chevron-right {
+  color: #FFD43B;
+  font-size: 24px;
 }
 
 .product-card::before {
@@ -267,7 +359,11 @@ body,
   background-color: rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
-
+/* section4starts */
+.li-1,
+.li-2 {
+  margin-bottom: 30px;
+}
 .our-product-txt,
 .about-txt-section {
   color: #FFD43B;
@@ -299,6 +395,7 @@ body,
 }
 
 .col-md-3 .company-product-card {
+  cursor: pointer;
   border-radius: 25px;
 }
 
@@ -399,7 +496,17 @@ body,
 .section-4-card-txt p {
   font-size: 16px;
 }
+#section-4 .text-center img {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+#section-4.in-view .text-center img {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* section5start */
 .popular-txt {
   color: #0A306C;
   font-size: 45px;
@@ -458,7 +565,23 @@ body,
   background-color: #FFD43B;
   color: #0A306C;
 }
+.company-product-card {
+  overflow: hidden; /* Hide the overflow content */
+  border-radius: 25px;
+}
 
+.company-product-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+.company-product-card:hover img {
+  transform: scale(1.1); /* Scale the image on hover */
+}
+
+/* section6start */
 .quality-monitoring {
   background-color: #0A306C;
   width: 100%;
@@ -499,17 +622,25 @@ body,
   margin-bottom: 40px;
   text-align: center;
 }
-
 .lab-icon {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.lab-icon {
+.lab-icon i {
   font-size: 45px;
+  color: #FFD43B;
+  transition: transform 0.3s ease;
+}
+
+.lab-icon:hover i {
+  transform: translateY(-10px);
 }
 
 .lab-readmore {
+  position: relative;
+  overflow: hidden;
   background-color: #FFD43B;
   color: #0A306C;
   border-radius: 50px;
@@ -522,11 +653,10 @@ body,
 }
 
 .lab-readmore:hover {
-  color: #0A306C;
   background-color: #FFFFFF;
-  border: 2px solid #FFD43B;
+  color: #FFD43B;
 }
-
+/* section7start */
 .our-clients {
   margin: 80px 0;
   text-align: center;
@@ -652,6 +782,7 @@ body,
 
 .social-icons i {
   font-size: 24px;
+  cursor: pointer;
 }
 
 @media (max-width:991px) {
