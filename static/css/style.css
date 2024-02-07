@@ -111,7 +111,7 @@ body,
 }
 
 .carousel-item {
-  height: 100vh;
+  height: 600px;
   background-size: cover;
   background-position: center;
   display: flex;
