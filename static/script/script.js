@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to check if an element is in the viewport
   function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
     return (
@@ -9,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-
-  // Function to handle intersection observer events
   function handleIntersection(entries, observer) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -19,11 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  // Set up an Intersection Observer to trigger animations when the section comes into view
   var observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
-
-  // Targeting section-2 and section-4
   var section2 = document.getElementById("section-2");
   var section4 = document.getElementById("section-4");
 
@@ -34,7 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
   if (section4) {
     observer.observe(section4);
   }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
-  // Attach slid.bs.carousel event listener after DOMContentLoaded
- 
+  var navbar = document.querySelector(".navbar-nav");
+
+  if (navbar) {
+    navbar.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (event.target.tagName === "A") {
+        var targetSectionId = event.target.getAttribute("data-section-id");
+        scrollToSection(targetSectionId);
+      }
+    });
+  }
 });

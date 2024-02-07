@@ -112,23 +112,26 @@ body,
 
 
 .carousel-item {
-  height: 600px;
+  height: 800px;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: zoomIn 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: zoomIn 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 @keyframes zoomIn {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
-  100% {
-    transform: scale(1);
+  75% {
+    transform: scale(1.08);
+  }
+  100%{
+    transform: scale(1.1);
   }
 }
 
@@ -566,7 +569,7 @@ body,
   color: #0A306C;
 }
 .company-product-card {
-  overflow: hidden; /* Hide the overflow content */
+  overflow: hidden; 
   border-radius: 25px;
 }
 
@@ -575,10 +578,10 @@ body,
   height: auto;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  transition: transform 0.3s ease; 
 }
 .company-product-card:hover img {
-  transform: scale(1.1); /* Scale the image on hover */
+  transform: scale(1.1);
 }
 
 /* section6start */
@@ -860,7 +863,9 @@ body,
   }
 
   @media (max-width:767px) {
-
+    .carousel-item{
+      height: 600px;
+    }
     .carousel-txt h1,
     .popular-txt {
       font-size: 35px;
