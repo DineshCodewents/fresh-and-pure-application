@@ -47,4 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  var carouselItems = document.querySelectorAll(".carousel-item");
+  carouselItems.forEach(function (carouselItem) {
+    carouselItem.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (event.target.tagName === "BUTTON") {
+        var targetSectionId = event.target.getAttribute("data-section-id");
+        scrollToSection(targetSectionId);
+      }
+    });
+  });
 });
