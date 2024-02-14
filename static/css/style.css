@@ -768,6 +768,10 @@ body,
   font-size: 16px;
   color: #FFFFFF;
   padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .footer-end span {
@@ -787,7 +791,20 @@ body,
   font-size: 24px;
   cursor: pointer;
 }
-
+.footer-end a{
+  color: #FFD43B;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+.footer-end a:not(:last-child)::after {
+  content: "|";
+  margin-left: 40px;
+  color: #FFFFFF;
+}
+.footer-end a:hover{
+  color: #FFD43B;
+}
 @media (max-width:991px) {
   .contact-section {
     display: none;
@@ -901,6 +918,9 @@ body,
       max-width: 100%;
       margin-bottom: 30px;
     }
+    .footer-end{
+      gap: 20px;
+    }
   }
 
   @media (max-width:575px) {
@@ -925,6 +945,13 @@ body,
     .company-para {
       width: 60%;
       align-self: center;
+    }
+    .footer-end{
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-end a:not(:last-child)::after {
+      display: none;
     }
   }
 }
