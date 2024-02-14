@@ -15,7 +15,7 @@ body,
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .envelope-section,
@@ -191,6 +191,8 @@ body,
 .btn-contact:hover {
   background-color: #FFD43B;
   color: #0A306C;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .btn-contact {
@@ -745,7 +747,7 @@ body,
 }
 
 .footer-row {
-  padding: 40px 50px;
+  padding: 50px 50px;
 }
 
 .footer-heading {
@@ -776,20 +778,6 @@ body,
 
 .footer-end span {
   color: #FFD43B;
-}
-
-.social-links,
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  padding-bottom: 40px;
-}
-
-.social-icons i {
-  font-size: 24px;
-  cursor: pointer;
 }
 .footer-end a{
   color: #FFD43B;
