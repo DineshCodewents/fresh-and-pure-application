@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css/refund_policy.css">
+  <link rel="stylesheet" href="../static/css/privacy_policy.css">
+  <link rel="stylesheet" href="../static/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -19,7 +20,46 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="contact-section">
+    <div class="container contact-container">
+      <div class="contact-offline">
+        <div class="envelope-section">
+        <i class="fa-solid fa-envelope" style="color: #FFD43B;"></i>
+        <p><a href="">freshpure.in@gmail.com</a></p>
+          </div>
+          <div class="location-section">
+        <i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i>
+        <p><a href="">29 Nicolas str, New York, 987597-50</a></p>
+      </div>
+        <div class="phone-section">
+        <i class="fa-solid fa-phone" style="color: #FFD43B;"></i>
+        <p><a href="">+919442917151</a></p>
+      </div>
+      </div>
+
+      <div class="contact-online ">
+        <p>follow-us -</p>
+        <p><a href=""><i class="fab fa-twitter" style="color: #FFD43B;"></i></a></p>
+        <p><a href=""><i class="fab fa-instagram" style="color: #FFD43B;"></i></a></p>
+        <p><a href=""><i class="fab fa-facebook" style="color: #FFD43B;"></i></a></p>
+        <p><a href=""><i class="fab fa-linkedin" style="color: #FFD43B;"></i></a></p>
+        <p><a href=""><i class="fab fa-youtube" style="color: #FFD43B;"></i></a></p>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light  d-lg-flex">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="../static/assets/fresh_pure 1 (2).png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="container policy-container">
     <h1>Refund Policy</h1>
 
     <p>Welcome to Fresh & Pure! We are committed to providing you with fresh farm products and exceptional service. Our Refund Policy outlines the process for cancellations and refunds associated with the use of our farm products delivery app ("App"). Please review the following policy:</p>
@@ -36,10 +76,64 @@
 
     <p>If you have any questions or concerns about our Refund Policy, please don't hesitate to reach out to us. You can contact Fresh & Pure via email at <a href="mailto:freshpure.in@gmail.com">freshpure.in@gmail.com</a> or by phone at <a href="tel:+919442917151">094429 17151</a>. Additionally, you're welcome to visit us at 3/293, State Bank Colony, NGGO Colony, Thudiyalur, Tamil Nadu 641022.</p>
   </div>
+  <div class="footer" id="footer">
+    <div class="container">
+      <div class="company-details">
+        <div class="company-name">
+          <h1>Fresh and Pure</h1>
+        </div>
+        <div class="company-para">
+          <p>Etiam consequat sem ullamcorper, euismod metus sit amet, tristique
+            justo. Vestibulum bonsesuat mattis, nisi ut.</p>
+        </div>
+      </div>
+      <div class="row footer-row">
+        <div class="col-md-4 first-col">
+          <div class="footer-heading">
+            <h1>Write Us</h1>
+            <p>freshpure.in@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-4 first-col">
+          <div class="footer-heading">
+            <h1>Address</h1>
+            <p>975 Liberty Ave, Union, NJ 07083, UAS</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-heading">
+            <h1>Phone</h1>
+            <p>+919442917151</p>
+          </div>
+        </div>
+      </div>
+      <div class="social-links">
+        <div class="social-icons">
+          <i class="fa-brands fa-twitter" style="color: #E8BC5A;"></i>
+        </div>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook" style="color: #E8BC5A;"></i>
+        </div>
+        <div class="social-icons">
+          <i class="fa-brands fa-youtube" style="color: #E8BC5A;"></i>
+        </div>
+        <div class="social-icons">
+          <i class="fa-brands fa-instagram" style="color: #E8BC5A;"></i>
+        </div>
+      </div>
+
+      <div class="footer-end">
+        <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+        <a href="{{ url_for('refund_policy') }}">Refund Policy</a>
+        <a href="{{ url_for('terms_and_condition') }}">Terms and Conditions</a>
+        <!-- <p><span>Like-themes</span> © All Rights Reserved - 2020 - <span>Purchase</span></p> -->
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-    <script src="../static/script/script.js"></script>
 
 </body>
 
