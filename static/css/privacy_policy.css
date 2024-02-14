@@ -49,4 +49,7 @@ ul li{
   .navbar h1, .policy-container h1{
     font-size: 35px;
   }
+  .policy-container{
+    margin: 0px 0 80px 0;
+  }
 }
