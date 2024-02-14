@@ -8,18 +8,13 @@ body,
   padding: 0;
   font-family: 'Asap', sans-serif;
 }
-.navbar h1{
-  color: #0A306C;
-  font-size: 45px;
-  font-weight: 700;
-}
 .container{
   margin: 30px 0;
 }
 .policy-container{
   margin: 30px 0 80px 0;
 }
-.policy-container h1{
+.policy-container h1,.navbar h1{
   color: #0A306C;
   font-size: 45px;
   font-weight: 700;
@@ -49,4 +44,9 @@ ul li{
 }
 .envelope-section p, .location-section p, .phone-section p{
   margin-bottom: 0;
+}
+@media (max-width:767px){
+  .navbar h1, .policy-container h1{
+    font-size: 35px;
+  }
 }
