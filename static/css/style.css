@@ -435,11 +435,14 @@ body,
   justify-content: space-between;
 }
 
-.explore-product,
-.about-company {
+.explore-product
+ {
   margin-top: 80px;
 }
-
+.about-company{
+  margin-top: 80px;
+  margin-bottom:80px;
+}
 .quality-number {
   display: flex;
   gap: 20px;
