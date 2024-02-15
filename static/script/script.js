@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  var carouselItems = document.querySelectorAll(".carousel-item");
+  var carouselItems = document.querySelectorAll(".navbar-icons");
   carouselItems.forEach(function (carouselItem) {
     carouselItem.addEventListener("click", function (event) {
       event.preventDefault();
