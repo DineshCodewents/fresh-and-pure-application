@@ -119,22 +119,19 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: zoomIn 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: zoomIn 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+
 @keyframes zoomIn {
   0% {
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.05);
-  }
-  75% {
-    transform: scale(1.08);
-  }
-  100%{
+  100% {
     transform: scale(1.1);
   }
 }
+
+
 
 .carousel-item::before {
   content: "";
